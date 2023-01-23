@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          .box-calculator {
+               margin-bottom: 380px;
+               border: 2px solid;
+               width: 296px;
+               margin: 0 auto;
+               background: black;
+
+          }
+
+          .box-calculator input {
+               font-size: 24px;
+               height: 114px;
+               width: 253px;
+               padding: 0px 20px;
+               background: black;
+               color: #fff;
+               border-bottom: 2px solid;
+
+          }
+
+          .calculator-button {
+
+               color: #fff;
+               text-align: center;
+
+
+
+          }
+
+          .calculator-button button {
+               border-radius: 37px;
+               height: 54px;
+               width: 61px;
+               font-size: 29px;
+               padding: 0px 12px;
+               margin-top: 12px;
+               color: black;
+          }
+
+          .calculator-button p {
+               font-size: 27px;
+          }
+
+          .js-button {
+               text-align: center;
+          }
+
+          .js-button button {
+               border-radius: 37px;
+               height: 54px;
+               width: 55px;
+               font-size: 29px;
+               padding: 0px 12px;
+               margin: 5px 8px;
+               color: #fff;
+               background: black;
+               text-align: center;
+               box-shadow: 0px 10px 30px 0px rgb(153 153 153 / 60%);
+          }
+
+          .js-button button:hover {
+               background-color: #fff;
+               color: #000;
+
+          }
+     </style>
+</head>
+
+<body>
+
+
+
+     <div class="box-calculator">
+
+          <input type="text" id="name">
+
+          <div class="calculator-button">
+
+               <p>Javascript Calculator</p>
+
+          </div>
+
+          <div class="js-button">
+               <button onclick="myclear('C')">C</button><br>
+               <button onclick="myname('7')">7</button>
+               <button onclick="myname('8')">8</button>
+               <button onclick="myname('9')">9</button>
+               <button onclick="myname('+')">+</button>
+               <br>
+               <button onclick="myname('4')">4</button>
+               <button onclick="myname('5')">5</button>
+               <button onclick="myname('6')">6</button>
+               <button onclick="myname('-')">-</button>
+               <br>
+               <button onclick="myname('1')">1</button>
+               <button onclick="myname('2')">2</button>
+               <button onclick="myname('3')">3</button>
+               <button onclick="myname('*')">*</button>
+               <br>
+               <button onclick="myname('0')">0</button>
+               <button onclick="myname('.')">.</button>
+               <button onclick="myname('/')">/</button>
+               <button onclick="mydata('=')">=</button>
+
+
+          </div>
+
+     </div>
+     <script>
+          function myname(value) {
+
+               let input = document.getElementById('name').value;
+               input = input + value
+               document.getElementById('name').value = input
+
+          }
+
+          function mydata() {
+
+               input = document.getElementById('name').value
+               let result = eval(document.getElementById('name').value)
+               document.getElementById('name').value = result;
+          }
+
+          function myclear() {
+               document.getElementById('name').value = ''
+
+
+          }
+     </script>
+
+</body>
+
+</html>
